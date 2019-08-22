@@ -1,0 +1,22 @@
+import gmpy2
+
+p = gmpy2.mpz(8637633767257008567099653486541091171320491509433615447539162437911244175885667806398411790524083553445158113502227745206205327690939504032994699902053229 )
+q = gmpy2.mpz(12640674973996472769176047937170883420927050821480010581593137135372473880595613737337630629752577346147039284030082593490776630572584959954205336880228469 )
+print(p*q)
+e = gmpy2.mpz(17)
+phi_n = (p - 1) * (q - 1)
+d = gmpy2.invert(e, phi_n)
+print ("private key:")
+print (d)
+# d = 1941
+# c = gmpy2.mpz(150815)
+#
+#
+# print("plaintext:")
+# M  =  pow(c,d,p*q)
+# print('[10进制]' + str(M))
+# flag = str(hex(M))[2:]
+# print('[16进制]' + flag)
+# print('[ASCII码]' + bytes.fromhex(flag).decode('utf-8'))
+# str = "6e4f045d4b8506bf492ada7e3390d7ce"
+# print(bytes.fromhex(str).decode('utf-8'))
