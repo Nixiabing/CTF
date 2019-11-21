@@ -4,9 +4,15 @@
 #         s = int(str[i]+str[i+1]+str[i+2],8)
 #         print(chr(s),end='')
 
-str = "89FQA9WMD<V1A<V1S83DY.#<W3$Q,2TM]"
-s = "89FQA9WMD<V1A<V1S83DY.#<W3$Q,2TM]"
-print(chr(32^108))
+# str = "89FQA9WMD<V1A<V1S83DY.#<W3$Q,2TM]"
+# s = "89FQA9WMD<V1A<V1S83DY.#<W3$Q,2TM]"
+# print(chr(32^108))
 
 # for i in range(33):
 #     print(chr(ord(str[i])^ord(s[i])))
+
+import string
+for i in range(90):
+    s = ""
+    for n in range(6):
+        print(string.printable)
